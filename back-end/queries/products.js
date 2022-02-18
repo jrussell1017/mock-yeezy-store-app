@@ -37,8 +37,42 @@ const createNewProduct = async (product) => {
   }
 };
 
+const deleteProduct = async (id) => {
+  try {
+    const deletedProduct = await db.one(
+      "DELETE FROM products WHERE id=$1 RETURNING *",
+      id
+    );
+    return deletedProduct;
+  } catch (err) {
+    return err;
+  }
+};
+
+const updateProduct = async (id, product) => {
+  try {
+    const updatedProduct = await db.one(
+      "UPDATE products SET name=$1, description=$2, featured=$3, image=$4, price=$5, rating=$6 WHERE id=$7 RETURNING *",
+      [
+        product.name,
+        product.description,
+        product.featured,
+        product.image,
+        product.price,
+        product.rating,
+        id,
+      ]
+    );
+    return updatedProduct;
+  } catch (err) {
+    return err;
+  }
+};
+
 module.exports = {
   getAllProducts,
   getOneProduct,
   createNewProduct,
+  deleteProduct,
+  updateProduct,
 };
