@@ -9,6 +9,16 @@ const getAllProducts = async () => {
   }
 };
 
+const getOneProduct = async (id) => {
+    try {
+      const product = await db.one("SELECT * FROM products WHERE id=$1", id);
+      return product;
+    } catch (error) {
+      return error;
+    }
+  };
+
 module.exports = {
   getAllProducts,
+  getOneProduct,
 };
