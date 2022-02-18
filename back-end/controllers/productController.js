@@ -35,6 +35,7 @@ products.post("/", async (req, res) => {
   const { body } = req;
   try {
     const createdProduct = await createNewProduct(body);
+    
     if (createdProduct.id) {
       res.status(200).json(createdProduct);
     } else {
