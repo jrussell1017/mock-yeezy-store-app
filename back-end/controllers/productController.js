@@ -1,6 +1,6 @@
 const express = require("express");
 const products = express.Router();
-const { getAllProducts, getOneProduct } = require("../queries/products.js");
+const { getAllProducts, getOneProduct, createNewProduct } = require("../queries/products.js");
 
 // GET ALL PRODUCTS
 products.get("/", async (req, res) => {
@@ -23,5 +23,20 @@ products.get("/:id", async (req, res) => {
     res.status(500).json({ error: "Product not found." });
   }
 });
+
+// CREATE NEW PRODUCT
+products.post("/", async (req, res) => {
+    const { body } = req;
+    try {
+      const createdProduct = await createNewProduct(body);
+      if (createdProduct.id) {
+        res.status(200).json(createdProduct);
+      } else {
+        res.status(500).json({ error: "Product creation error." });
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
 
 module.exports = products;
