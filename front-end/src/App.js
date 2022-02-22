@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar.js";
 import Home from "./Pages/Home.js";
 import Index from "./Pages/Index.js"
+import Show from "./Pages/Show.js";
+import New from "./Pages/New.js";
+import Edit from "./Pages/Edit.js";
 import FourOFour from "./Pages/FourOFour.js";
 
 function App() {
@@ -14,9 +17,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Index />} />
-            {/* <Route path="/products/new" element={<New />} />
+            <Route path="/products/new" element={<New />} />
             <Route exact path="/products/:id" element={<Show />} />
-            <Route path="/products/:id/edit" element={<Edit />} /> */}
+            <Route path="/products/:id/edit" element={<Edit />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
