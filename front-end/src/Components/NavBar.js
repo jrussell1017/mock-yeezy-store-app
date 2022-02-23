@@ -16,7 +16,7 @@ function NavBar() {
       </div>
       <div>
         <button>
-          <Link to="/cart">Cart: </Link>
+          <Link to="/cart">Cart</Link>
         </button>
       </div>
     </nav>

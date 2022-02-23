@@ -43,17 +43,18 @@ function NewProduct() {
           value={product.name}
           type="text"
           onChange={handleTextChange}
-          placeholder="Name.."
+          placeholder="Name of product..."
           required
         />
-        <label htmlFor="description">product description:</label>
+        <label htmlFor="description">Product Description:</label>
         <input
           id="description"
           type="text"
           value={product.description}
           onChange={handleTextChange}
+          placeholder="Product colorway..."
         />
-        <label htmlFor="price">price:</label>
+        <label htmlFor="price">Price:</label>
         <input
           id="price"
           type="number"
@@ -61,20 +62,22 @@ function NewProduct() {
           value={product.price}
           onChange={handleTextChange}
         />
-        <label htmlFor="image">product image:</label>
+        <label htmlFor="image">Product Image:</label>
         <input
           id="image"
           type="text"
           value={product.image}
           onChange={handleTextChange}
+          placeholder="Product image url..."
         />
         <label htmlFor="featured">Featured:</label>
         <input
-          id="featured"
+          id="featured-button"
           type="checkbox"
           onChange={handleCheckboxChange}
           checked={product.featured}
         />
+        <br />
         <br />
         <input type="submit" />
       </form>

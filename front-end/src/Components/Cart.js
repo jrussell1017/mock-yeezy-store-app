@@ -2,7 +2,7 @@
 function Cart({ cart }) {
 
     let cartItems = cart.map((product) => {
-        return <li>{`${product.name}: ${product.price}`}</li>
+        return <li key={product.id}>{`${product.name}: $${product.price}.00`}</li>
     })
 
     return(

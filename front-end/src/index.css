@@ -1,3 +1,5 @@
+/* NavBar CSS */
+
 nav {
   background-color: blanchedalmond;
   display: flex;
@@ -9,6 +11,8 @@ nav {
   margin-bottom: 15px;
   align-items: center;
 }
+
+/* NavBar CSS */
 
 main {
   width: 90vw;
@@ -61,3 +65,41 @@ article {
   padding: 2px 16px;
 }
 
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid blanchedalmond;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid blanchedalmond;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  background-color: blanchedalmond;
+}
+
+input[type=number]:focus {
+  background-color: blanchedalmond;
+}
+
+input[type=submit] {
+  transition-duration: 0.4s;
+  background-color: white;
+  border-radius: 6px;
+  border-color: black;
+}
+
+input[type=submit]:hover {
+  background-color: blanchedalmond;
+}
+
+/* Radio Button CSS */
