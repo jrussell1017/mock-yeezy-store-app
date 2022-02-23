@@ -27,7 +27,7 @@ article {
   padding: 1em;
 }
 
-.Products div {
+.Product {
   width:fit-content;
   padding: 1em;
   margin: auto;
@@ -35,8 +35,14 @@ article {
   transition: 0.3s;
 }
 
+.Products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
 .Products img {
-  width: 350px;
+  width: 250px;
 }
 
 /* .card {
@@ -46,7 +52,7 @@ article {
 } */ 
 
 /* On mouse-over, add a deeper shadow */
-.Products:hover {
+.Product:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 

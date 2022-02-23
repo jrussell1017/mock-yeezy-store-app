@@ -2,18 +2,19 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function EditProduct() {
-  const { id } = useParams();
-  const [product, setProduct] = useState({
-    name: "",
-    description: "",
-    featured: null,
-    image: "",
-    price: 0,
-  });
+const API = process.env.REACT_APP_API_URL;
 
-  const API = process.env.REACT_APP_API_URL;
-  const navigate = useNavigate();
+function EditProduct() {
+    const { id } = useParams();
+    const [product, setProduct] = useState({
+        name: "",
+        description: "",
+        featured: null,
+        image: "",
+        price: 0,
+    });
+    
+    const navigate = useNavigate();
 
   useEffect(() => {
     axios

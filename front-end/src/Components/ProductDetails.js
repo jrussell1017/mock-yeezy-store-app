@@ -4,8 +4,9 @@ import axios from "axios";
 
 const API = process.env.REACT_APP_API_URL;
 
-function ProductDetails() {
+function ProductDetails({ grabCart }) {
   const [product, setProduct] = useState([]);
+  // const [cart, setCart] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -32,6 +33,10 @@ function ProductDetails() {
         });
     };
 
+    const handleAddToCart = (product) => {
+        grabCart(product);
+    }
+
   return (
     <div>
       <img src={product.image} alt={product.name} width="350px"></img>
@@ -45,6 +50,9 @@ function ProductDetails() {
         </Link>
         <div>
           <button onClick={handleDelete}>Delete</button>
+        </div>
+        <div>
+          <button onClick={()=>handleAddToCart(product)}>Add To Cart</button>
         </div>
       </div>
     </div>
