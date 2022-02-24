@@ -2,7 +2,7 @@ import ProductDetails from "../Components/ProductDetails";
 
 function Show({ grabCart }) {
   return (
-    <div>
+    <div id="details-container">
       <ProductDetails grabCart={grabCart}/>
     </div>
   );
