@@ -12,10 +12,19 @@ import FourOFour from "./Pages/FourOFour.js";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
 
   let grabCart = (product) => {
     setCart([...cart, product])
   }
+
+  const total = () => {
+    let totalInCart = 0;
+    for (let i = 0; i < cart.length; i++) {
+        totalInCart += cart[i].price;
+      }
+      setCartTotal(totalInCart);
+  };
 
   return (
     <div className="App">
@@ -28,7 +37,7 @@ function App() {
             <Route path="/products/new" element={<New />} />
             <Route exact path="/products/:id" element={<Show grabCart={grabCart} />} />
             <Route path="/products/:id/edit" element={<Edit />} />
-            <Route path="/cart" element={<Cart cart={cart} />} />
+            <Route path="/cart" element={<Cart cart={cart} total={total} />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>

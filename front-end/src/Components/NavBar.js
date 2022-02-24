@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import yeezyLogo from "../assets/yeezyLogo.png";
 
-function NavBar() {
+function NavBar({cartTotal}) {
   return (
     <nav>
       <h1>
@@ -16,11 +16,15 @@ function NavBar() {
       </div>
       <div>
         <button>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart"><img id="cart-icon" width="50px" src={"http://toppng.com/uploads/preview/shopping-cart-sign-shopping-cart-empty-ico-11563228005rnccz3lvl0.png"} alt="cart icon"/></Link>
         </button>
+        <div>
+          {cartTotal}
+        </div>
       </div>
     </nav>
   );
 }
+
 
 export default NavBar;

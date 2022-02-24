@@ -7,7 +7,6 @@ const API = process.env.REACT_APP_API_URL;
 
 function ProductDetails({ grabCart }) {
   const [product, setProduct] = useState([]);
-  // const [cart, setCart] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
 
