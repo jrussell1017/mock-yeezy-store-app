@@ -70,6 +70,14 @@ function NewProduct() {
           onChange={handleTextChange}
           placeholder="Product image url..."
         />
+        <label htmlFor="rating">Rating:</label>
+        <input
+          id="rating"
+          type="number"
+          name="rating"
+          value={product.rating}
+          onChange={handleTextChange}
+        />
         <label htmlFor="featured">Featured:</label>
         <input
           id="featured-button"

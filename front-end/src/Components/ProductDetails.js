@@ -58,14 +58,14 @@ function ProductDetails({ grabCart }) {
     // </div>
 
     <Card style={{ width: "25rem" }}>
-      <Card.Title>Product Details</Card.Title>
+      <Card.Title>
+        <h1>Product Details</h1>
+      </Card.Title>
       <Card.Img variant="top" src={product.image} alt={product.name} />
       <Card.Body>
         <Card.Text>
-          <h5>
-            {product.name}: {product.description}
-          </h5>
-          <h4>${product.price}.00</h4>
+          {product.name}: {product.description}
+          <span>${product.price}.00</span>
         </Card.Text>
         <Link to={"/products"}>
           <button>Back</button>

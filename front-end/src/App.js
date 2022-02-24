@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
+        <NavBar cart={cart}/>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

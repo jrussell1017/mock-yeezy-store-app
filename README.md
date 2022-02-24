@@ -1,5 +1,8 @@
 # PERN Final Project Template
 
+- [Deployed Front-End](https://admiring-perlman-b589ac.netlify.app/)
+- [Deployed Back-End](https://jr-cta-be.herokuapp.com/)
+
 - select `use this template`
 - clone this repo
 
