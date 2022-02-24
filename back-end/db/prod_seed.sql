@@ -4,5 +4,5 @@ INSERT INTO products (name, description, price, rating, featured, image) VALUES
 ('Knit Runner Boot', 'Sulpher', 400, 5, true, 'http://seangoca.files.wordpress.com/2021/11/dsc07262b.jpg?w=994&h=&zoom=2'),
 ('Yeezy Foam Runner', 'Sand', 75, 5, true, 'http://cdn.sanity.io/images/c1chvb1i/production/a1e9927add952a1de190db03688b7d8efd789f10-1100x735.jpg/191592420_1457073971293656_3883658647910884946_n.jpg'),
 ('Yeezy 350', 'Yeshaya', 220, 4, false, 'http://cdn.sanity.io/images/c1chvb1i/production/9e5b70bb085ca82acab21db7192be776e8970b43-700x468.jpg/adidas-Yeezy-Boost-350-V2-Yeshaya-FX4348-Release-Date-5on-foot.jpg'),
-('Yeezy 450', 'Cloud White', 200, 4, false, 'http://media.blackandwhite-ff.com/10000/af3d07f9-c9b5-4948-9504-5ce052c9f032_tophero.jpg'),
+('Yeezy 450', 'Cloud White', 200, 4, false, 'http://media.blackandwhite-ff.com/10000/af3d07f9-c9b5-4948-9504-5ce052c9f032_tophero.jpg')
 
